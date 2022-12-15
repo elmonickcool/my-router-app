@@ -1,18 +1,24 @@
+import React from 'react';
+
+import {Box, Typography,Button,Container } from '@mui/material';
 
 
 function Home() {
     return (
-        <div className="container">
-            <h1 className="display-1">Hello</h1>
-            <div className="row">
-                <div className="col">
-                    Hello
-                </div>
-                <div className="col">
-                    Hello I'm Elmo Nickol
-                </div>
-            </div>
-        </div>
+            <Container>
+                <Box component="header"
+            height={300}
+            backgroundSize="cover"
+            display="flex"
+            alignItems="center"
+            justifyContent="center">
+            <Typography variant='h1'>Hello World!</Typography>
+              
+            </Box>
+            <Button>click me</Button>
+            </Container>
+           
+      
         
     );
 }

@@ -1,19 +1,33 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { AppBar,Typography,Toolbar,Container } from '@mui/material';
+
+const navLink ={
+    color:'black',
+    textDecoration:'none',
+};
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <ul className="navbar nav me-auto mb-2 mb-lg-0">
-                    <li className='nav-item me-2'>
-                        <Link to="./Home"  style={{ color: 'Black' }} >Home</Link>
-                    </li>
-                    <li>
-                        <Link to="./About"  style={{ color: 'Black' }} >About</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <AppBar color="default">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <Typography sx={{mx:2}}>
+                       <Link to="/">Logo</Link>
+                    </Typography>
+                    <Typography sx={{mx:2}}>
+                       <Link to="/Home" style={Object.assign({},navLink)}>Home</Link>
+                    </Typography>
+                    <Typography sx={{mx:2}}>
+                       <Link to="/About" style={Object.assign({},navLink)}>About</Link>
+                    </Typography>
+                    <Typography sx={{mx:2}}>
+                       <Link to="/Portfolio" style={Object.assign({},navLink)}>Portfolio</Link>
+                    </Typography>
+                </Toolbar>
+                
+            </Container>
+        </AppBar>
     );
 }
 export default Navbar;
